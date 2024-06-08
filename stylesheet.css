@@ -27,7 +27,7 @@ nav {
     padding: 25px;
 }
 
-.card p {
+.card p, .card ol, .card h2, .card h3 {
     text-align: left;
 }
 
