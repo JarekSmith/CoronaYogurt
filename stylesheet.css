@@ -63,6 +63,10 @@ a:hover {
     background-size: 50% auto;
 }
 
+#about img {
+    box-shadow: 2px 2px 5px black;
+}
+
 #events {
     background-color: tan;
     background-image: url("images/temple1.jpg")
