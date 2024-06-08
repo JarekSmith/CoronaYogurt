@@ -1,0 +1,104 @@
+body {
+    background-color: black;
+    background-image: url(images/stars.png);
+    background-size: 500px;
+    font-family: Verdana, sans-serif;
+    text-align: center;
+}
+
+header {
+    color: white;
+}
+
+nav {
+    margin-bottom: 20px;
+    font-family:'Courier New', Courier, monospace
+}
+
+.card {
+    border-radius: 10px;
+    border: 2px solid black;
+    width: 20%;
+    margin: auto;
+    vertical-align: top;
+    display: inline-block;
+    margin-bottom: 5px;
+    text-align: center;
+    padding: 25px;
+}
+
+.card p {
+    text-align: left;
+}
+
+.row {
+    vertical-align: top;
+}
+
+a {
+    color: green;
+}
+
+a:hover {
+    color: lightgreen;
+}
+
+#logo {
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+#title {
+    box-shadow: 0px 0px 20px black;
+}
+
+@keyframes color-osc {
+    0% { color: purple; }
+    100% { color: green; }
+}
+
+#about {
+    background-color: lightblue;
+    background-image: url("images/stucco.jpg");
+    background-size: 50% auto;
+}
+
+#events {
+    background-color: tan;
+    background-image: url("images/temple1.jpg")
+}
+
+#events img {
+    width: 212px;
+}
+
+#bulletin {
+    background-color: orange;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.5em;
+}
+
+#bulletin img {
+    padding-bottom: 5px;
+}
+
+#activity {
+    background-color: lightgreen;
+}
+
+.links {
+    text-decoration: none;
+    padding: 5px;
+    font: bold;
+    border-radius: 5px;
+    background-color: coral;
+    color: white;
+}
+
+.links:hover {
+    filter: brightness(150%);
+}
+
+.links:active {
+    filter: brightness(50%);
+}
