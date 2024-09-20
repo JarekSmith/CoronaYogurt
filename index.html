@@ -4,6 +4,8 @@
         <link href="favicon.ico" rel="icon">
         <link href="stylesheet.css" rel="stylesheet">
         <script src="script.js" type="text/javascript"></script>
+        <script async defer src="https://apis.google.com/js/api.js" onload="gapiLoaded()"></script>
+        <script async defer src="https://accounts.google.com/gsi/client" onload="gisLoaded()"></script>
     </head>
     <body>
         <header>
@@ -18,8 +20,8 @@
             <section id="about" class="card">
                 <img src="images/welcome.gif" alt="Welcome">
                 <p>You're probably here for the modpack. To download it, click the button below!</p>
-                <a href="https://onedrive.live.com/download?resid=C3EECBCD0B3E8BEE%2124948&authkey=!AMjV_T55VkoDEro"><img src="images/download.gif"></a>
-                <h4><em>NEW! Version 0.1.0</em></h4>
+                <a href="https://dmhozg.by.files.1drv.com/y4mbsOaeWADcnckiAfrUKjiOVIBHxWNnNXogxSp4GFODr4JnKqaORaOI_C6pnrjyeU8S8f0h6U7Kyl2Eb4tJNQrox76mUkHyRiwkeFYP3JyNYHPeZrJfRtmcxfvJwuZdC-irROwDGA6jeaiqpsfdeRbPymdoWng2ip4GIVYu5c0DAZzvSgWswMycxGY1kOkoa0ubTQj6NOAg8-hHuRR2190HrYxReiQjfLy_AmnZhI1NEE?AVOverride=1"><img src="images/download.gif"></a>
+                <h4><em>NEW! Version 2.3.0</em></h4>
                 <h2>Installation instructions</h2>
                 <h3>"Here's what you're gonna do." -Mike Ehrmantraut</h3>
                 <ol>
@@ -33,7 +35,7 @@
             </section>
             <section id="events" class="card">
                 <img src="images/events2.gif" alt="Events">
-                <p>No scheduled events for the month of [MONTH]</p>
+                <p id="eventsList"></p>
             </section>
         </div>
         <div class="row">
