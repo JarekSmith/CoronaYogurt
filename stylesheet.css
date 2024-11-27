@@ -1,6 +1,5 @@
 body {
-    background-color: black;
-    background-image: url(images/stars.png);
+    background-image: linear-gradient(to bottom, purple, orange);/*url(images/stars.png);*/
     background-size: 500px;
     font-family: Verdana, sans-serif;
     text-align: center;
@@ -12,19 +11,41 @@ header {
 
 nav {
     margin-bottom: 20px;
-    font-family:'Courier New', Courier, monospace
+    font-family:'Courier New', Courier, monospace;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    width: 20%;
+    margin: auto;
+    margin-bottom: 20px;
+    justify-items: center;
+    align-items: center;
+}
+
+nav a {
+    width: fit-content;
+    height: fit-content;
+    user-select: none;
 }
 
 .card {
     border-radius: 10px;
     border: 2px solid black;
-    width: 30%;
+    width: 90%;
     margin: auto;
     vertical-align: top;
     display: inline-block;
     margin-bottom: 5px;
     text-align: center;
     padding: 25px;
+    grid-column: 2 / 3;
+}
+
+.rightcard {
+    grid-column: 3 / 4;
+}
+
+.leftcard {
+    grid-column: 1 / 2;
 }
 
 .card p, .card ol, .card h2, .card h3 {
@@ -41,6 +62,7 @@ a {
 
 a:hover {
     color: lightgreen;
+    cursor: pointer;
 }
 
 #logo {
@@ -48,9 +70,9 @@ a:hover {
     border-radius: 5px;
 }
 
-#title {
+/*#title {
     box-shadow: 0px 0px 20px black;
-}
+}*/
 
 @keyframes color-osc {
     0% { color: purple; }
@@ -105,4 +127,68 @@ a:hover {
 
 .links:active {
     filter: brightness(50%);
+}
+
+#shrekButton {
+    height: 60px;
+    
+}
+
+#shrekButton:hover {
+    cursor: pointer;
+    filter: hue-rotate(90deg);
+}
+
+#shrekButton:active {
+    filter: brightness(50%);
+}
+
+.flexbody {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    align-content: center;
+}
+
+#minecraftinfo {
+    display: none;
+}
+
+#serverinfo {
+    background-image: url("images/grassblock.jpg");
+    background-size: 110% auto;
+    color: white;
+    font-weight: bold;
+    background-repeat: no-repeat;
+}
+#serverinfo img {
+    width: 80%;
+}
+
+#serverinfo li{
+    text-align: left;
+}
+
+.eventDetails {
+    display: none;
+}
+
+.event:hover {
+    cursor: pointer;
+}
+
+.event {
+    user-select: none;
+    margin: auto;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    display: inline-block;
+    background-image: url("images/papertexture.png");
+    box-shadow: 2px 2px 5px black;
+}
+
+.paperend {
+    background-image: url("images/paperend.png");
+    width: 19px;
+    white-space: pre;
+    background-repeat: no-repeat;
 }

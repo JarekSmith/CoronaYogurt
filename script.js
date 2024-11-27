@@ -61,15 +61,72 @@ async function listUpcomingEvents() {
     }
     // Flatten to string to display
     const output = events.reduce(
-        (str, event) => `${str}</li><li><strong>${event.summary}</strong> (${event.start.dateTime || event.start.date})</li>`, '<li>');
-        document.getElementById('eventsList').innerHTML = `<ul>${output}</ul>`;
-        document.getElementById('eventsList').innerHTML = document.getElementById('eventsList').innerHTML.replace("<li></li>", "");
+        (str, event) => `${str}</li><li><a class = "event"><strong>${event.summary}</strong> (${ConvertDate(event.start.dateTime || event.start.date)})</a><span class="paperend">    </span><br><span class="eventDetails">${event.description}</span></li>`, '<li>');
+    document.getElementById('eventsList').innerHTML = `<ul>${output}</ul>`;
+    document.getElementById('eventsList').innerHTML = document.getElementById('eventsList').innerHTML.replace("<li></li>", "");
+    for (const e of document.getElementById("eventsList").children[0].children) {
+        e.addEventListener("click", ShowDetails);
+    }
 }
+
+const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 function NoEvents() {
     let monthP = document.getElementById("eventsList");
     const d = new Date()
-    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     let currentMonth = months[d.getMonth()]
     monthP.innerHTML = `No scheduled events for the month of <strong>${currentMonth}</strong>`
 }
+
+function ConvertDate(date) {
+    var temp = date.split('-');
+    return `${months[Number(temp[1]) - 1].substring(0, 3)} ${temp[2]}`;
+}
+
+let isPlaying = false;
+
+function ToggleMusic() {
+    var shrekAudio = document.getElementById("shrekAudio");
+    var shrekButton = document.getElementById("shrekButton");
+    if (isPlaying) {
+        // If music is currently playing, pause music
+        shrekAudio.pause();
+        isPlaying = false;
+        shrekButton.src = "images/shrekicon.png";
+    }
+    else {
+        shrekAudio.play();
+        isPlaying = true;
+        shrekButton.src = "images/shrekReal.png";
+    }
+}
+
+function SwitchPage(openpage) {
+    var pages = document.getElementsByClassName("flexbody");
+    for (let i = 0; i < pages.length; i++) {
+        if (pages[i]  != openpage) {
+            pages[i].style.display = "none";
+        }
+    }
+    openpage.style.display = "grid";
+}
+
+function ShowDetails() {
+    var details = this.children[3];
+    if (details.style.display == "none") {
+        details.style.display = "block";
+    }
+    else {
+        details.style.display = "none";
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("shrekButton").addEventListener("click", ToggleMusic);
+    document.getElementById("homeButton").addEventListener("click", function() {
+        SwitchPage(document.getElementById("homepage"));
+    })
+    document.getElementById("minecraftButton").addEventListener("click", function() {
+        SwitchPage(document.getElementById("minecraftinfo"));
+    })
+})

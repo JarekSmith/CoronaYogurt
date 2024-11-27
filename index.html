@@ -9,19 +9,22 @@
     </head>
     <body>
         <header>
-            <img src="images/coronamask.png" alt="Corona Yogurt" title="Corona Yogurt" id="title">
+            <img src="images/CoronaYogurtFallTransparent.png" alt="Corona Yogurt" title="Corona Yogurt" id="title">
             <h2>By gamers, for gamers</h2>
         </header>
         <nav>
-            <a href="index.html" class="links">Home</a>
+            <a id="homeButton" class="links">Home</a>
+            <a id="minecraftButton" class="links">Minecraft</a>
             <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="links">YouTube</a>
+            <img src="images/shrekicon.png" id="shrekButton">
         </nav>
-        <div class="row">
+        <div class="flexbody" id="homepage">
+            
             <section id="about" class="card">
                 <img src="images/welcome.gif" alt="Welcome">
-                <p>You're probably here for the modpack. To download it, click the button below!</p>
-                <a href="https://dmhozg.by.files.1drv.com/y4mbsOaeWADcnckiAfrUKjiOVIBHxWNnNXogxSp4GFODr4JnKqaORaOI_C6pnrjyeU8S8f0h6U7Kyl2Eb4tJNQrox76mUkHyRiwkeFYP3JyNYHPeZrJfRtmcxfvJwuZdC-irROwDGA6jeaiqpsfdeRbPymdoWng2ip4GIVYu5c0DAZzvSgWswMycxGY1kOkoa0ubTQj6NOAg8-hHuRR2190HrYxReiQjfLy_AmnZhI1NEE?AVOverride=1"><img src="images/download.gif"></a>
-                <h4><em>NEW! Version 2.3.0</em></h4>
+                <p>If you're here for the Minecraft modpack, click the button below!</p>
+                <a href="https://1drv.ms/u/s!Au6LPgvNy-7Dgdkk223z12nkOIMmlg?e=VWfGte"><img src="images/download.gif"></a>
+                <h4><em>NEW! Mastering Magic Version 11.1.0</em></h4>
                 <h2>Installation instructions</h2>
                 <h3>"Here's what you're gonna do." -Mike Ehrmantraut</h3>
                 <ol>
@@ -33,17 +36,34 @@
                     <li>Navigate to the downloaded pack and open it. CurseForge should now automatically install it as a pack on your dashboard</li>
                 </ol>
             </section>
-            <section id="events" class="card">
-                <img src="images/events2.gif" alt="Events">
-                <p id="eventsList"></p>
-            </section>
-        </div>
-        <div class="row">
+            
+            <div class="card-holder">
+                <section id="events" class="card rightcard">
+                    <img src="images/events2.gif" alt="Events">
+                    <p id="eventsList"></p>
+                </section>
+            </div>
+
             <section id="bulletin" class="card">
                 <h1>Goku</h1>
                 <img src="images/gokuspin2.gif" alt="goku" title="Goku">
             </section>
-        <audio autoplay loop>
+
+        </div>
+
+        <div class="flexbody" id="minecraftinfo">
+
+            <section id="serverinfo" class="card">
+                <img src="images/minecraftserver.png">
+                <p>Server addresses:</p>
+                <ul>
+                    <li>Vanilla server: mc.fartsound.us</li>
+                    <li>Modded server: play.fartsound.us</li>
+                </ul>
+            </section>
+
+        </div>
+        <audio loop id="shrekAudio">
             <source src="audio/All Star.mp3" type="audio/mpeg">
             <source src="audio/All Star.ogg" type="audio/ogg">
         </audio>
