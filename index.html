@@ -1,71 +1,72 @@
 <html>
     <head>
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="styles.css">
         <title>Corona Yogurt</title>
-        <link href="favicon.ico" rel="icon">
-        <link href="stylesheet.css" rel="stylesheet">
-        <script src="script.js" type="text/javascript"></script>
-        <script async defer src="https://apis.google.com/js/api.js" onload="gapiLoaded()"></script>
-        <script async defer src="https://accounts.google.com/gsi/client" onload="gisLoaded()"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lilex:ital,wght@0,100..700;1,100..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     </head>
     <body>
-        <header>
-            <img src="images/CoronaYogurtFallTransparent.png" alt="Corona Yogurt" title="Corona Yogurt" id="title">
-            <h2>By gamers, for gamers</h2>
-        </header>
-        <nav>
-            <a id="homeButton" class="links">Home</a>
-            <a id="minecraftButton" class="links">Minecraft</a>
-            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="links">YouTube</a>
-            <img src="images/shrekicon.png" id="shrekButton">
-        </nav>
-        <div class="flexbody" id="homepage">
-            
-            <section id="about" class="card">
-                <img src="images/welcome.gif" alt="Welcome">
-                <p>If you're here for the Minecraft modpack, click the button below!</p>
-                <a href="https://1drv.ms/u/s!Au6LPgvNy-7Dgdkk223z12nkOIMmlg?e=VWfGte"><img src="images/download.gif"></a>
-                <h4><em>NEW! Mastering Magic Version 11.1.0</em></h4>
-                <h2>Installation instructions</h2>
-                <h3>"Here's what you're gonna do." -Mike Ehrmantraut</h3>
-                <ol>
-                    <li>Download the pack</li>
-                    <li>Open CurseForge</li>
-                    <li>Make sure you're on the Minecraft tab by clicking the grass block on the left</li>
-                    <li>Click <strong>+ Create Custom Profile</strong> in the top right.</li>
-                    <li>Click "Or <u>import</u> a previously created profile"</li>
-                    <li>Navigate to the downloaded pack and open it. CurseForge should now automatically install it as a pack on your dashboard</li>
-                </ol>
-            </section>
-            
-            <div class="card-holder">
-                <section id="events" class="card rightcard">
-                    <img src="images/events2.gif" alt="Events">
-                    <p id="eventsList"></p>
-                </section>
-            </div>
-
-            <section id="bulletin" class="card">
-                <h1>Goku</h1>
-                <img src="images/gokuspin2.gif" alt="goku" title="Goku">
-            </section>
-
+        <div id="title-text">
+            <img src="images2/coronayogurt.png">
         </div>
-
-        <div class="flexbody" id="minecraftinfo">
-
-            <section id="serverinfo" class="card">
-                <img src="images/minecraftserver.png">
-                <p>Server addresses:</p>
-                <ul>
-                    <li>Vanilla server: mc.fartsound.us</li>
-                    <li>Modded server: play.fartsound.us</li>
-                </ul>
-            </section>
-
+        <div id="nav-text">
+            <a class="xp-button" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">YouTube</a>
+            <a class="xp-button" onclick="togglePlay()">Play Music</a>
+            <a class="xp-button" href="https://www.youtube.com/@mages.8096" target="_blank">MAGES.</a>
         </div>
-        <audio loop id="shrekAudio">
-            <source src="audio/All Star.mp3" type="audio/mpeg">
-            <source src="audio/All Star.ogg" type="audio/ogg">
-        </audio>
+        <div id="info-text">
+            <p>Vanilla Server: mc.fartsound.us | Modded Server: play.fartsound.us</p>
+        </div>
+        <div id="body-text">
+            <h1>Welcome</h1>
+            <hr>
+            <h2>Horror Modpack</h2>
+            <h3>12/14/2025</h3>
+            <p>If you're here, you're probably looking to download the modpack we're playing right now!</p>
+            <a href="downloads/Cave Horror Project 1 Heehee-v3.1.2.zip" download><img src="images2/download.gif"></a>
+            <p>Once you download the modpack, open Curseforge and click <strong>Import +</strong>. It should then let 
+                you choose a .zip file; upload the modpack. Curseforge should handle the rest!</p>
+            <p>Alternatively, if the code is still working, you can try to import using the code <strong>zGtJCwS2</strong>.
+            It expires after 7 days, so don't count on it for long!</p>
+            <hr>
+            <h2>Five Nights at Freddy's 2</h2>
+            <h3>12/13/2025</h3>
+            <p>Just watched the FNAF2 movie!</p>
+            <p>I'm just going to preface, it's not a very good movie. If you're looking to hoot and holler at "peak cinema,"
+                the FNAF2 movie is probably not going to be what you're looking for. However, it <i>is</i> pretty <i>cool</i>.
+                I'd kind of compare it to those old monster versus movies--it doesn't have a groundbreaking story or anything
+                that's going to make you FEEL a certain way, but it's pretty darn fun to watch these robots do stuff and be
+                dangerous.</p>
+            <p>The fact that they're all practical (as far as I know) makes for a fun watch. They have a presence wherever they go.
+                Watching a movie where the characters are talking to what's clearly CGI always takes me out of it, I can't just not
+                imagine them talking to an empty room.
+            </p>
+            <p>It's packed full of references that's sure to make your 12-year-old son/daughter chortle with glee. <i>Definitely</i> consider
+            taking your child out to see this film if you need some brownie points with them, they'll love you for it.</p>
+            <p>Overall, I'd give the Five Nights at Freddy's 2 movie a solid 2.5/5 stars. Not a terrible movie, pretty enjoyable as far
+                as video game movies go, but nothing to write home about.
+            </p>
+            <hr>
+            <h2>On the death of spinning Goku</h2>
+            <h3>12/5/2025</h3>
+            <p>It is with a heavy heart that I must announce the passing of our old friend, gokuspin2.gif.</p>
+            <img id="goku-spin" src="images2/gokuspin2.gif" style="filter: grayscale(100%); max-width: 320px; min-height: 256px;" onclick="toggleKojima()">
+            <p>He was found dead in his home on October 12th, 2025. While the cause of death is unknown, foul play has been
+                ruled out as a possibility. We would like to ask the members of this community to cherish his memory and
+                remember him well.</p>
+            <p>In somewhat related news, an auction will be held on December 25th, 2025. With no next of kin, the state has
+                decided to sell off his belongings in order to repay his outstanding debts and unpaid taxes. Hope to see you there!
+            </p>
+        </div>
+        <div id="blinky-text">
+            <img src="images2/blinkies/coffee.gif">
+            <img src="images2/blinkies/spooky.gif">
+            Copyright Jarek T. Smith 2001
+            <img src="images2/blinkies/silly.gif">
+            <img src="images2/blinkies/sailor.gif">
+        </div>
+        <audio id="shrek-audio" src="audio/All Star.ogg" type="audio/ogg"></audio>
     </body>
 </html>

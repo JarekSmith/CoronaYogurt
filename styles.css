@@ -1,0 +1,76 @@
+body {
+    background-color: rgb(0, 0, 168);
+    background-image: url("images2/backgrounds/pdj50233.gif");
+    text-align: center;
+    font-family: "Lilex", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    cursor:url("images2/swordcursor.png"), auto;
+}
+
+div {
+    text-align: left;
+    background-color: white;
+    padding: 0.5vw;
+    width: 50%;
+    border-style: dotted;
+    border-color: pink;
+    display: inline-block;
+    margin: 0.75vh;
+    text-align: center;
+}
+
+#title-text {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-style: solid;
+}
+
+#nav-text {
+    background: none;
+    border-style: none;
+}
+
+#info-text {
+    color: rgb(78, 78, 78);
+}
+#body-text {
+    text-align: left;
+}
+
+a:hover {
+    cursor:url("images2/pointer.png"), auto;
+}
+
+a {
+    user-select: none;
+}
+
+button:hover {
+    cursor:url("images2/point")
+}
+
+.xp-button {
+    background: silver;
+    border: none;
+    border-radius: 0;
+    box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff, inset -2px -2px grey, inset 2px 2px #dfdfdf;
+    box-sizing: border-box;
+    color: transparent;
+    min-height: 23px;
+    min-width: 75px;
+    padding: 5px 12px;
+    text-shadow: 0 0 #222;
+    font-family: "Pixelated MS Sans Serif", Arial;
+    text-decoration: none;
+}
+
+.xp-button:focus {
+    outline: 1px dotted #000;
+    outline-offset: -4px;
+}
+
+.xp-button:active {
+    box-shadow: inset -1px -1px #fff,inset 1px 1px #0a0a0a,inset -2px -2px #dfdfdf,inset 2px 2px grey;
+    text-shadow: 1px 1px #222;
+}
