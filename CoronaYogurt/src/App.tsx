@@ -1,5 +1,6 @@
 import './App.css'
 import ServerStatus from './components/server-status'
+import Post from './components/post'
 import logo from './assets/images/coronayogurt.png';
 
 function App() {
@@ -8,13 +9,16 @@ function App() {
     <>
       <img id="head-logo" src={logo} />
       <nav>
-        <a href="https://www.jareksmith.com">YouTube</a>
-        <a id="btn-music">Music</a>
-        <a href="https://www.youtube.com/@mages.8096">MAGES.</a>
+        <a className="xp-button" href="https://www.jareksmith.com">YouTube</a>
+        <a className="xp-button" id="btn-music">Music</a>
+        <a className="xp-button" href="https://www.youtube.com/@mages.8096">MAGES.</a>
       </nav>
       <div id="status-box">
-        {ServerStatus("Vanilla", "mc.fartsound.us")}
-        {ServerStatus("Modded", "play.fartsound.us")}
+        {ServerStatus({type: "Vanilla", address: "mc.fartsound.us"})}
+        {ServerStatus({type: "Modded", address: "play.fartsound.us"})}
+      </div>
+      <div id="post-box">
+        {Post({title: "Deez Nuts", date: "7/6/2026", body:" Something came in the mail today"})}
       </div>
     </>
   )

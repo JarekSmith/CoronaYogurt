@@ -1,25 +1,28 @@
-import { Component } from 'react';
+import { useEffect, useState } from 'react';
 
-class ServerStatus extends Component {
-    render(type: string, address: string) {
-        const indicator = (color: string) => {
-            return (
-            <svg width="100" height="100">
-                <circle cx="50" cy="50" r="50" fill={color}/>
+export default function ServerStatus({type, address}: {type: String, address: String}) {
+    const indicator = (color: string) => {
+        return (
+            <svg width="25" height="25">
+                <circle cx="50%" cy="50%" r="50%" fill={color}/>
             </svg>
-            )
-        }
-        let response = fetch(`https://api.mcstatus.io/v2/status/java/${address}`);
-        if (!response.ok) throw new Error(`Response: ${response.status}`);
-        let result =  response.json();
-        const icon = result.online ? indicator("green") : indicator("red");
-
-        return ( 
-            <>
-                <div>{type} Server: {address} {icon}</div>
-            </>
         )
     }
-}
+    const [icon, setIcon] = useState(indicator("red"));
+    
+    useEffect(() => {
+        (async () => {
+            let response = await fetch(`https://api.mcstatus.io/v2/status/java/${address}`);
+            if (!response.ok) throw new Error(`Status: ${response.status}`);
+            let result = await response.json();
+            if (result.online) setIcon(indicator("green"));
+            else setIcon(indicator("red")); 
+        })()
+    }, [setIcon, address]);
 
-export default ServerStatus;
+    return ( 
+        <>
+            <div>{type} Server: {address} {icon}</div>
+        </>
+    )
+}
