@@ -2,49 +2,74 @@ body, #root {
   display: flex;
   flex-direction: column;
   place-items: center;
-  background-color: transparent;
   border: none;
   gap: 10px;
   font-family: "Lilex", monospace;
   font-optical-sizing: auto;
   font-style: normal;
   cursor:url("assets/images/swordcursor.png"), auto;
-
 }
 
-#root > div, img {
+#root {
+  width: 50%;
+  align-items: stretch;
+}
+
+#root > div {
   background-color: white;
   border: dashed gray 2px;
-  padding: 5px;
-  width: 100%;
+  padding: 10px;
+}
+
+#root > img {
+  border: white 2px solid;
 }
 
 :root {
   background-image: url("./assets/images/backgrounds/pdj50233.gif");
 }
 
-#head-logo {
-  background-color: rgba(0, 0, 0, 0.5);
-  border: solid;
+nav {
+  text-align: center;
 }
 
-#status-box {
+nav a {
+  margin: 0px 10px;
+}
+
+#root > #head-logo {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: solid white;
+  padding: 0 20%;
+}
+
+#root > #status-box {
   margin-top: 0px;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  gap: 10px;
 }
 
 #status-box div {
   display: flex;
   flex-direction: row;
-  gap: 10px;
   width: auto;
   justify-content: space-between;
 }
 
-#post-box {
-  
+#root > #post-box {
+  float: left;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer img {
+  aspect-ratio: 15 / 2;
 }
 
 .xp-button {

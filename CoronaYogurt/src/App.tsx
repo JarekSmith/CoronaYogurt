@@ -1,7 +1,9 @@
 import './App.css'
 import ServerStatus from './components/server-status'
 import Post from './components/post'
+import Footer from './components/footer'
 import logo from './assets/images/coronayogurt.png';
+import cheerio from './assets/images/cheerio.jpg';
 
 function App() {
 
@@ -20,6 +22,10 @@ function App() {
       <div id="post-box">
         {Post({title: "Deez Nuts", date: "7/6/2026", body:" Something came in the mail today"})}
       </div>
+      <div id="blinky-box">
+        {Footer()}
+      </div>
+      <img src={cheerio} style={{width: "50%", margin: "auto"}} />
     </>
   )
 }
